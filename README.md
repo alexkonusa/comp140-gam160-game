@@ -9,15 +9,15 @@ The level itself will act as the obstacle for the player and levels will be smal
 
 **Core Mechanics**
 
-Turn left, right and accelerate controls; 
+**Turn left, right and accelerate controls:**
 Simple 3 input vehicle controller  
  
-Physics based vehicle; 
+**Physics based vehicle:**
 Environment can affect the vehicle and make it harder for the player to complete the level 
  
-Level that act like obstacles; 
+**Level that act like obstacles:**
 Objects that can break if too much weight is added or small objects that can make it harder for the player to control the vehicle 
  
-Timer; 
+**Timer:** 
 Each level will have a set timer if failed to complete the level before the time runs out it will restart 
 
