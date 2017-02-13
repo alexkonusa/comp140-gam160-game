@@ -1,13 +1,21 @@
 # comp140-gam160-game
 Repository for Assignment 1 of COMP140-GAM160
 
-Game Idea: Alex Konusa
+# ${1:Tiny CAR}
 
-My game idea is a small physics based vehicle that needs to be driven from one position to another, the vehicle will be unbalanced and hard to control there for it will be difficult for the player to get the vehicle from one position to another without failing the level. The level itself will act as the obstacle for the player and levels will be small but difficult. For example, one of the level ideas that I had is two planks that are laid across a river and the player needs to get the car from one side to another. Driving onto the planks fast can break the planks, which will lead to failure, player can be careful and take their time but having a set time in which they need to complete the level will put them under pressure. 
+Game Idea: Alex Konusa 
+My game idea is a small physics based car or any other type of vehicle that needs to be driven from one position to another, the vehicle will be unbalanced and hard to control there for it will be difficult for the player to get the vehicle from one position to another without failing the level.  
+The level itself will act as the obstacle for the player and levels will be small but difficult. For example, one of the level idea that I had is where two planks are laid across a river and the player needs to get the vehicle from one side to another. If the player drives the car too quick or unexpected weight is added they can break which will lead to failure. The player can be very careful and take the time to complete the level but there also be a set timer in which the player needs to complete the level otherwise they will fail and the level will restart.  
+Core Mechanics  
+Turn left, right and accelerate controls; 
+Simple 3 input vehicle controller  
+ 
+Physics based vehicle; 
+Environment can affect the vehicle and make it harder for the player to complete the level 
+ 
+Level that act like obstacles; 
+Objects that can break if too much weight is added or small objects that can make it harder for the player to control the vehicle 
+ 
+Timer; 
+Each level will have a set timer if failed to complete the level before the time runs out it will restart 
 
-Core Mechanics
-
-Turn left, right and accelerate controls 
-Physics based vehicle (Environment affects the vehicle)
-Levels that act like obstacles
-Timer 
