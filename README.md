@@ -1,7 +1,7 @@
 # comp140-gam160-game
 Repository for Assignment 1 of COMP140-GAM160
 
-# ${1:Tiny CAR}
+# Tiny CAR
 
 Game Idea: Alex Konusa 
 My game idea is a small physics based car or any other type of vehicle that needs to be driven from one position to another, the vehicle will be unbalanced and hard to control there for it will be difficult for the player to get the vehicle from one position to another without failing the level.  
