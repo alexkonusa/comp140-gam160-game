@@ -23,3 +23,14 @@ Objects that can break if too much weight is added or small objects that can mak
 **Timer:** 
 Each level will have a set timer if failed to complete the level before the time runs out it will restart 
 
+# Level Ideas 
+
+**First Level Idea [Planks]**
+
+This level has a very simple layout and I will only be needed 2 game objects that is the floating block of land and a plank which I can duplicate and resize to create a level. 
+
+**Level Testing[2/26/2017]**
+
+So far I have a working simple car mechanics (will improve later) which I have used to test the level, I have created 3 lots of land blocks and some plants(See picture below). I do not have any destruction mechanics yet but i wound out that if I see the mass to 0.7 on the plank if i drive too fast or move wheels around the planks bounce off the ground, but this worked and I really liked the idea and how it played so far. Using keyboard controlls it was easy to play but I feel that when I create my custom controller it will be much harder to controll the car there for the level will be much harder. 
+
+![alt tag](http://imgur.com/a/eKB0Y)
