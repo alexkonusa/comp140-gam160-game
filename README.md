@@ -25,6 +25,13 @@ Each level will have a set timer if failed to complete the level before the time
 
 # Custom Controller
 
+**Research**
+
+Before thinking of a game and a cotroller, it was interesting to see what kind of custom controllers people already came up with and below I list a couple that have caught my eye. 
+
+Blind Car Simulator ("Blind Car Simulator | Shake That Button (W.I.P)"): I really liked this idea because it was something that I have never seen before, even though the controlls werent that creative but overall it turned out great and unique. Player drives a car using a generic steering wheel with only sound as his navigation. This idea looks very simple and unique, I feel like this is where it had caught my interest. I never worked on anything car based and i'm all up for trying new things, this is where I desided to create a car based game. 
+
+
 
 
 # Level Ideas 
@@ -38,3 +45,7 @@ This level has a very simple layout and I will only be needed 2 game objects tha
 So far I have a working simple car mechanics (will improve later) which I have used to test the level, I have created 3 lots of land blocks and some plants(See picture below). I do not have any destruction mechanics yet but i found out that if I set the mass to 0.7 on the plank if i drive too fast or move wheels around the planks bounce off the ground, but this worked and I really liked the idea and how it played so far. Using keyboard controlls it was easy to play but I feel that when I create my custom controller it will be much harder to controll the car there for the level will be much harder. 
 
 ![Planks](http://i.imgur.com/2PPZaEG.png)
+
+# Bibliography
+
+"Blind Car Simulator | Shake That Button (W.I.P)". Shakethatbutton.com. N.p., 2017. Web. 23 Nov. 2015.
