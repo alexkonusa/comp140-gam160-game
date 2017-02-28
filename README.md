@@ -32,7 +32,7 @@ I have had couple of ideas for controllers that would suit the game, but after d
 List of Physical Components that I will need:
 
 2x Ultrasonic Range Finder
-2x Buttons 
+& 2x Buttons 
 
 **Controller Sketches and Design**
 
