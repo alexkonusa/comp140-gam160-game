@@ -29,6 +29,9 @@ Each level will have a set timer if failed to complete the level before the time
 
 I have had couple of ideas for controllers that would suit the game, but after doing some research I had to change and adapt to what I can achieve. My controller Idea is to have 2 pedals with Range Sensors that will be used to steer the car, player will need to use his feet to steer left or right. To steer the car, player will need to place 1 foot at a time on the pedal in which derection they want to steer. To accelerate and brake I will have two buttons which will preform the actions, in order to accelerate player will need to use their hands and press the according button. 
 
+I feel that this alt controller idea is ideal for the type of game i'm trying to make while also making it possible for me to complete.
+Because I will be making a physics based car game, I think that this controller will make it difficult for the player to control the vehicle, which is simply my goal. When I complete this Idea, I can always expand and create something a little more advance. 
+
 List of Physical Components that I will need:
 
 2x Ultrasonic Range Finder
@@ -36,8 +39,6 @@ List of Physical Components that I will need:
 
 **Controller Sketches and Design**
 
-![Button Sketch](https://raw.githubusercontent.com/alexkonusa/comp140-gam160-game/master/Images/buttons.png)
-![Pedal](https://raw.githubusercontent.com/alexkonusa/comp140-gam160-game/master/Images/foot.png)
 
 **Research**
 
