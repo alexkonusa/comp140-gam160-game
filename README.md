@@ -39,6 +39,10 @@ List of Physical Components that I will need:
 
 **Controller Sketches and Design**
 
+![Button Sketch](https://raw.githubusercontent.com/alexkonusa/comp140-gam160-game/master/Images/buttons.png)
+![Pedal](https://raw.githubusercontent.com/alexkonusa/comp140-gam160-game/master/Images/foot.png)
+
+To make this controller I will need access to some basic tools like saw, screw driver that's if im going to be using wood. If i decide to use plastic I will need access to AUTO CAD and Acrylic. 
 
 **Research**
 
