@@ -27,15 +27,12 @@ Each level will have a set timer if failed to complete the level before the time
 
 **Controller Description**
 
-I have had couple of ideas for controllers that would suit the game, but after doing some research I had to change and adapt to what I can achieve. My controller Idea is to have 2 pedals with Range Sensors that will be used to steer the car, player will need to use his feet to steer left or right. To steer the car, player will need to place 1 foot at a time on the pedal in which derection they want to steer. To accelerate and brake I will have two buttons which will preform the actions, in order to accelerate player will need to use their hands and press the according button. 
+I have had couple of ideas for controllers that would suit the game, but after doing some research I had to change and adapt to what I can achieve.  
 
-I feel that this alt controller idea is ideal for the type of game i'm trying to make while also making it possible for me to complete.
-Because I will be making a physics based car game, I think that this controller will make it difficult for the player to control the vehicle, which is simply my goal. When I complete this Idea, I can always expand and create something a little more advance. 
+My controller Idea is to have 2 pedals with Range Sensors that will be used to steer the car, player will need to use his feet to steer left or right. To steer the car, player will need to place 1 foot at a time on the pedal according to which direction they want to steer. To accelerate and brake I will have two buttons which will perform the actions, in order to accelerate or brake player will need to use their hands to press the buttons.  
 
-List of Physical Components that I will need:
-
-2x Ultrasonic Range Finder
-& 2x Buttons 
+I feel that this alt controller idea is ideal for the type of game I'm trying to make while also making it possible for me to complete. 
+Because I will be making a physics based car game, I think that this controller will make it difficult for the player to control the vehicle, which is simply my goal. When I complete this controller, I can always expand and create something a little more advance. 
 
 **Controller Sketches and Design**
 
@@ -46,20 +43,17 @@ To make this controller I will need access to some basic tools like saw, screw d
 
 **Research**
 
-Before thinking of a game and a cotroller, it was interesting to see what kind of custom controllers people already came up with and below I list a couple that have caught my eye. 
-
-Blind Car Simulator: I really liked this idea because it was something that I have never seen before, even though the controlls werent that creative but overall it turned out great and unique. Player drives the car blindly and ("Blind Car Simulator | Shake That Button (W.I.P)") "Use the navigation by the sound of your environment and GPS to reach the destination". This idea looks very simple and unique, I feel like this is where it had caught my interest. I never worked on anything car based and i'm all up for trying new things, this is where I desided to create a car based game. 
-
-Drunk Man: This is a coop game where("Drunk-Man (Or Arak Man) | Shake That Button (W.I.P)") "Each player is assigned to a direction (up/down/left/right), and should drink Arak (an anised based alcohol) from a straw to move Pac-Man.". I really liked this Idea because i'm a fan of coop games and it also turned a classic into something unique. 
-
-Even though this game does not use sensors, for some reasson reading about this game and the controller motion sensors kept comming to my mind. Mainly because i though of alternative ways of making the controllers for this game. This is where I though what if I use sensors to move my car, maybe I could use body movement to move my car. This is where I really liked the Idea of leaning left and right to steer the car while having two pedals/buttons for acceleration and brake. 
-
-When looking at parts for the Arduino, i came to an issue that to create the controller I want it's either going to cost me a bomb or I would have to use alternativs such as Kinect to track the player movement and I didn't really feel comftable with this. This is where I can across a Ultrasonic Range Finder [Link to the Range Finder](https://www.bitsbox.co.uk/index.php?main_page=product_info&cPath=302_310&products_id=2109&zenid=fthsadm5kk2sbjsocrvvoobko5) which made me think what if I create the steering controlls using this component. Reasson I want to use the range finder is because I can configure how far I want the object to be, before it does something. 
-
-Firstly I was going to use PIR Module, but after doing some reseatch I found out that it can't track movement but only detect if a human has moved. [Link to the PIR Module](https://www.bitsbox.co.uk/index.php?main_page=product_info&cPath=302_303&products_id=2782&zenid=fthsadm5kk2sbjsocrvvoobko5)
-
-
-
+Before thinking of a game and a controller, it was interesting to see what kind of custom controllers people already came up with and below I list a couple that have caught my eye.  
+ 
+Blind Car Simulator: I really liked this idea because it was something that I have never seen before, even though the controls weren't that creative but overall it turned out great and unique. Player drives the car blindly and ("Blind Car Simulator | Shake That Button (W.I.P)") "Use the navigation by the sound of your environment and GPS to reach the destination". This idea looks very simple and unique, I feel like this is where it had caught my interest. I never worked on anything car based in Unity and I'm all up for trying new things, this is where I decided to create a car based game.  
+ 
+Drunk Man: This is a coop game where("Drunk-Man (Or Arak Man) | Shake That Button (W.I.P)") "Each player is assigned to a direction (up/down/left/right), and should drink Arak (an anised based alcohol) from a straw to move Pac-Man.". I really liked this Idea because I'm a fan of coop games and it also turned a classic into something unique.  
+ 
+Even though this game does not use sensors, for some reason reading about this game and the controller, motion sensors kept coming to my mind. Mainly because I thought of how this controller would have been made. This is where I thought what if I use sensors to move my car, maybe I could use body movement to move my car. This is where I really liked the Idea of leaning left and right to steer the car while having two pedals/buttons for acceleration and brake.  
+ 
+When looking at parts for the Arduino, I came to an issue that to create the controller I want it's either going to cost me a bomb or I would have to use alternatives such as Kinect to track the player movement and I didn't really feel comfortable with this as it was far too advance for me. This is where I can across a Ultrasonic Range Finder [Link to the Range Finder](https://www.bitsbox.co.uk/index.php?main_page=product_info&cPath=302_310&products_id=2109&zenid=fthsadm5kk2sbjsocrvvoobko5) which made me think what if I create the steering controls using this component. Reason I want to use the range finder is because I can configure how far I want the object to be, before it does something.  
+ 
+Firstly I was going to use PIR Module, but after doing some research I found out that it can't track movement but only detect if a human has moved which simply wasn't what I was looking for. [Link to the PIR Module](https://www.bitsbox.co.uk/index.php?main_page=product_info&cPath=302_303&products_id=2782&zenid=fthsadm5kk2sbjsocrvvoobko5)
 
 # Level Ideas 
 
@@ -67,11 +61,15 @@ Firstly I was going to use PIR Module, but after doing some reseatch I found out
 
 This level has a very simple layout and I will only be needed 2 game objects that is the floating block of land and a plank which I can duplicate and resize to create a level. 
 
-**Level Testing[2/26/2017]**
-
-So far I have a working simple car mechanics (will improve later) which I have used to test the level, I have created 3 lots of land blocks and some plants(See picture below). I do not have any destruction mechanics yet but i found out that if I set the mass to 0.7 on the plank if i drive too fast or move wheels around the planks bounce off the ground, but this worked and I really liked the idea and how it played so far. Using keyboard controlls it was easy to play but I feel that when I create my custom controller it will be much harder to controll the car there for the level will be much harder. 
-
 ![Planks](http://i.imgur.com/2PPZaEG.png)
+
+# Part List
+1. 2x Buttons
+2. Materials to make the shell for pedals and buttons
+3. Wires
+4. multiple 220 and 10k ohm Resistors 
+5. 2x Ultrasonic Range Finders
+
 
 # Bibliography
 
