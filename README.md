@@ -37,6 +37,7 @@ List of Physical Components that I will need:
 **Controller Sketches and Design**
 
 ![Button Sketch](https://raw.githubusercontent.com/alexkonusa/comp140-gam160-game/master/Images/buttons.png)
+![Pedal](https://raw.githubusercontent.com/alexkonusa/comp140-gam160-game/master/Images/foot.png)
 
 **Research**
 
