@@ -25,6 +25,10 @@ Each level will have a set timer if failed to complete the level before the time
 
 # Custom Controller
 
+**Controller Idea**
+
+
+
 **Research**
 
 Before thinking of a game and a cotroller, it was interesting to see what kind of custom controllers people already came up with and below I list a couple that have caught my eye. 
