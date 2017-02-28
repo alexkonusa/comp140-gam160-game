@@ -29,7 +29,13 @@ Each level will have a set timer if failed to complete the level before the time
 
 Before thinking of a game and a cotroller, it was interesting to see what kind of custom controllers people already came up with and below I list a couple that have caught my eye. 
 
-Blind Car Simulator ("Blind Car Simulator | Shake That Button (W.I.P)"): I really liked this idea because it was something that I have never seen before, even though the controlls werent that creative but overall it turned out great and unique. Player drives a car using a generic steering wheel with only sound as his navigation. This idea looks very simple and unique, I feel like this is where it had caught my interest. I never worked on anything car based and i'm all up for trying new things, this is where I desided to create a car based game. 
+Blind Car Simulator: I really liked this idea because it was something that I have never seen before, even though the controlls werent that creative but overall it turned out great and unique. Player drives the car blindly and ("Blind Car Simulator | Shake That Button (W.I.P)") "Use the navigation by the sound of your environment and GPS to reach the destination". This idea looks very simple and unique, I feel like this is where it had caught my interest. I never worked on anything car based and i'm all up for trying new things, this is where I desided to create a car based game. 
+
+Drunk Man: This is a coop game where("Drunk-Man (Or Arak Man) | Shake That Button (W.I.P)") "Each player is assigned to a direction (up/down/left/right), and should drink Arak (an anised based alcohol) from a straw to move Pac-Man.". I really liked this Idea because i'm a fan of coop games and it also turned a classic into something unique. 
+
+Even though this game does not use sensors, for some reasson reading about this game and the controller motion sensors kept comming to my mind. Mainly because i though of alternative ways of making the controllers for this game. This is where I though what if I use sensors to move my car, maybe I could use body movement to move my car. This is where I really liked the Idea of leaning left and right to steer the car while having two pedals/buttons for acceleration and brake. 
+
+When looking at parts for the Arduino, i came to an issue that to create the controller I want it's either going to cost me a bomb or I would have to use alternativs such as Kinect to track the player movement and I didn't really feel comftable with this. 
 
 
 
@@ -49,3 +55,4 @@ So far I have a working simple car mechanics (will improve later) which I have u
 # Bibliography
 
 "Blind Car Simulator | Shake That Button (W.I.P)". Shakethatbutton.com. N.p., 2017. Web. 23 Nov. 2015.
+"Drunk-Man (Or Arak Man) | Shake That Button (W.I.P)". Shakethatbutton.com. N.p., 2017. Web. 7 July 2015.
