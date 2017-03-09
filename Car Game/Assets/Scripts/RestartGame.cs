@@ -6,17 +6,35 @@ public class RestartGame : MonoBehaviour {
 
 	public string restartScene;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public bool useCollision = false;
 
-	public void restGame()
+    //Restart our Scene
+    void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.transform.tag == "Player" && useCollision == true)
+        {
+
+            restGame();
+
+        }
+
+    }
+
+    void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+
+            restGame();
+
+        }
+        
+    }
+
+    //We can Call this to restart the game
+    public void restGame()
 	{
 
 		SceneManager.LoadScene(restartScene);

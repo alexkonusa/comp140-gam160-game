@@ -17,6 +17,7 @@ public class Timer : MonoBehaviour
 
 		timerDisplay.text = "Time Left: " + timeLeft;
 
+        //if any key is pressed our timer will start
 		if (Input.anyKey)
 		{
 
@@ -24,6 +25,7 @@ public class Timer : MonoBehaviour
 
 		}
 
+        //if timeron is true then we start our count down
 		if (timerON == true)
 		{
 			
@@ -41,6 +43,7 @@ public class Timer : MonoBehaviour
 	
 	}
 
+    //restart the scene if we dont finish the game in the time given
 	void RestartScene()
 	{
 

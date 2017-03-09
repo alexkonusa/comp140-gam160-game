@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class Finish : MonoBehaviour 
 {
 
+    //Name of the scene
 	public string finishScene;
 
 	// Use this for initialization
@@ -20,9 +21,12 @@ public class Finish : MonoBehaviour
 	
 	}
 
+    //On trigger enter finish the game
+    //and go to the winning state menu
 	void OnTriggerEnter()
 	{
 
+        //looks for playing using the Player tag
 		if (GameObject.FindWithTag("Player"))
 		{
 
