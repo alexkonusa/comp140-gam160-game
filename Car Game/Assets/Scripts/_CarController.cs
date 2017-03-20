@@ -4,9 +4,12 @@
 
 using UnityEngine;
 using System.Collections;
+using System.IO.Ports;
 
 public class _CarController : MonoBehaviour 
 {
+
+  //  SerialPort serialPort = new SerialPort("COM4", 9600);
 
     //This is where we place our wheel colliders.
 	public WheelCollider leftWheel;
@@ -18,11 +21,16 @@ public class _CarController : MonoBehaviour
 	public float wheelSteeringAngle = 30.0f;
 	public float motorTorque = 400.0f;
 
+   public float test;
+
     //Rigid body for center of mass
     Rigidbody rb;
 
 	void Start()
 	{
+
+       // serialPort.Open();
+       // serialPort.ReadTimeout = 1;
 
         rb = GetComponent<Rigidbody>();
 
@@ -30,13 +38,33 @@ public class _CarController : MonoBehaviour
         rb.centerOfMass += CenterOfMass;
 
     }
-		
-	void FixedUpdate () 
+
+    private void Update()
+    {
+
+    }
+
+    void FixedUpdate () 
 	{
 
 		CarInput ();
 
-	}
+   //     string string1;
+
+
+    /*    try
+            {   
+                string1 = serialPort.ReadLine();
+                Debug.Log(string1);
+                test = float.Parse(string1);
+             }
+
+            catch (System.Exception)
+            {
+
+         */   //}
+
+    }
 
 	void CarInput ()
 	{
@@ -47,16 +75,19 @@ public class _CarController : MonoBehaviour
 		turnInput += (Input.GetKey (KeyCode.RightArrow)) ? 1 : 0;
 		turnInput += (Input.GetKey (KeyCode.LeftArrow)) ? -1 : 0;
 
-		leftWheel.steerAngle = wheelSteeringAngle * turnInput;
-		rightWheel.steerAngle = wheelSteeringAngle * turnInput;
+		//leftWheel.steerAngle = wheelSteeringAngle * turnInput;
+		//rightWheel.steerAngle = wheelSteeringAngle * turnInput;
+
+       // leftWheel.steerAngle = wheelSteeringAngle * test;
+       // rightWheel.steerAngle = wheelSteeringAngle * test;
 
         //moving the car forward and back
-		float motorInput = 0;
+        float motorInput = 0;
 		motorInput += (Input.GetKey (KeyCode.UpArrow)) ? 1 : 0;
 		motorInput += (Input.GetKey (KeyCode.DownArrow)) ? -1 : 0;
 
-		rearLeftWheel.motorTorque = motorTorque * motorInput;
-		rearRightWheel.motorTorque = motorTorque * motorInput;
+		//rearLeftWheel.motorTorque = motorTorque * motorInput;
+		//rearRightWheel.motorTorque = motorTorque * motorInput;
 
 
         //Applying our visual wheels, for te front and back
