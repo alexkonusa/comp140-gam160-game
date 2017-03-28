@@ -23,14 +23,18 @@ public class _CarController : MonoBehaviour
 
    public float test;
 
+    PortListener portListener;
+
     //Rigid body for center of mass
     Rigidbody rb;
 
 	void Start()
 	{
 
-       // serialPort.Open();
-       // serialPort.ReadTimeout = 1;
+        // serialPort.Open();
+        // serialPort.ReadTimeout = 1;
+
+        portListener = GameObject.Find("GameManagers").GetComponent<PortListener>();
 
         rb = GetComponent<Rigidbody>();
 
@@ -47,22 +51,35 @@ public class _CarController : MonoBehaviour
     void FixedUpdate () 
 	{
 
-		CarInput ();
+		//CarInput ();
+        ArduinoCarController();
+    }
 
-   //     string string1;
+    void ArduinoCarController()
+    {
+
+        float turnInput = 0;
+
+        if (portListener.yInput <= -60)
+        {
+
+            turnInput = 1;
+
+        }
 
 
-    /*    try
-            {   
-                string1 = serialPort.ReadLine();
-                Debug.Log(string1);
-                test = float.Parse(string1);
-             }
+        if (portListener.yInput >= 60)
+        {
 
-            catch (System.Exception)
-            {
+            turnInput = -1;
 
-         */   //}
+        }
+
+        leftWheel.steerAngle = wheelSteeringAngle * turnInput;
+        rightWheel.steerAngle = wheelSteeringAngle * turnInput;
+
+        VisualWheels(leftWheel);
+        VisualWheels(rightWheel);
 
     }
 

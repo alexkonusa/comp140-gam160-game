@@ -7,9 +7,8 @@ public class PortListener : MonoBehaviour
     //Port Name and Port Speed Public variables
     public string portName = "COM4";
     public int portSpeed = 9600;
-    public string inputOne;
-    public string inputTwo;
-    public string inputThree;
+    public int xInput;
+    public int yInput;
 
     SerialPort serialPort;
 
@@ -59,18 +58,19 @@ public class PortListener : MonoBehaviour
 
             if (currData.Substring(0, 1) == "A")
             {
-                inputOne = currData;
+
+                currData = currData.Remove(0, 1);
+
+                xInput = int.Parse(currData) / 31;
             }
 
             if (currData.Substring(0, 1) == "B")
             {
-                inputTwo = currData;
+                currData = currData.Remove(0, 1);
+
+                yInput = int.Parse(currData) / 100;
             }
 
-            if (currData.Substring(0, 1) == "C")
-            {
-                inputThree = currData;
-            }
         }
     }
 }
