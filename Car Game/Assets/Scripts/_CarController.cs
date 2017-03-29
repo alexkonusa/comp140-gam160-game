@@ -9,8 +9,6 @@ using System.IO.Ports;
 public class _CarController : MonoBehaviour 
 {
 
-  //  SerialPort serialPort = new SerialPort("COM4", 9600);
-
     //This is where we place our wheel colliders.
 	public WheelCollider leftWheel;
 	public WheelCollider rightWheel;
@@ -21,8 +19,7 @@ public class _CarController : MonoBehaviour
 	public float wheelSteeringAngle = 30.0f;
 	public float motorTorque = 400.0f;
 
-   public float test;
-
+    //Portlistener variable
     PortListener portListener;
 
     //Rigid body for center of mass
@@ -31,20 +28,14 @@ public class _CarController : MonoBehaviour
 	void Start()
 	{
 
-        // serialPort.Open();
-        // serialPort.ReadTimeout = 1;
-
-        portListener = GameObject.Find("GameManagers").GetComponent<PortListener>();
+        //Declaring our portListener script so that we can use our inputs
+        portListener = GameObject.Find("GameManager").GetComponent<PortListener>();
 
         rb = GetComponent<Rigidbody>();
 
+        //Changing the center of the rigidbody mass
         Vector3 CenterOfMass = new Vector3(0, 0, 0.2f);
         rb.centerOfMass += CenterOfMass;
-
-    }
-
-    private void Update()
-    {
 
     }
 
@@ -52,22 +43,28 @@ public class _CarController : MonoBehaviour
 	{
 
 		//CarInput ();
+
+        //Running our car input in fixed update
         ArduinoCarController();
+
+
     }
 
     void ArduinoCarController()
     {
 
         float turnInput = 0;
+        float motorInput = 0;
 
-        if (portListener.yInput <= -60)
+        //if the value is 0 the wheels will point straight.
+        //Else if yInput is lower than -90 it will steer left and if its higher than 60 
+        //it will steer right
+        if (portListener.yInput <= -90)
         {
 
             turnInput = 1;
 
-        }
-
-
+       }
         if (portListener.yInput >= 60)
         {
 
@@ -75,9 +72,31 @@ public class _CarController : MonoBehaviour
 
         }
 
+        //Applying our values and moving the car
         leftWheel.steerAngle = wheelSteeringAngle * turnInput;
         rightWheel.steerAngle = wheelSteeringAngle * turnInput;
 
+        //Accelerate and Reverse
+        // If button one and two are 1 it will change the motor input
+        // If the buttons are not pressed then the can will eventually stop and the value will be 0 
+        if (portListener.buttonOne == 1)
+        {
+
+            motorInput = 1;
+
+        }
+        if (portListener.buttonTwo == 1)
+        {
+
+            motorInput = -1;
+
+        }
+
+        //Apply our values to the engine
+        rearLeftWheel.motorTorque = motorTorque * motorInput;
+        rearRightWheel.motorTorque = motorTorque * motorInput;
+
+        //Applying our visual wheels, for te front and back
         VisualWheels(leftWheel);
         VisualWheels(rightWheel);
 
@@ -92,19 +111,17 @@ public class _CarController : MonoBehaviour
 		turnInput += (Input.GetKey (KeyCode.RightArrow)) ? 1 : 0;
 		turnInput += (Input.GetKey (KeyCode.LeftArrow)) ? -1 : 0;
 
-		//leftWheel.steerAngle = wheelSteeringAngle * turnInput;
-		//rightWheel.steerAngle = wheelSteeringAngle * turnInput;
+		leftWheel.steerAngle = wheelSteeringAngle * turnInput;
+		rightWheel.steerAngle = wheelSteeringAngle * turnInput;
 
-       // leftWheel.steerAngle = wheelSteeringAngle * test;
-       // rightWheel.steerAngle = wheelSteeringAngle * test;
 
         //moving the car forward and back
         float motorInput = 0;
 		motorInput += (Input.GetKey (KeyCode.UpArrow)) ? 1 : 0;
 		motorInput += (Input.GetKey (KeyCode.DownArrow)) ? -1 : 0;
 
-		//rearLeftWheel.motorTorque = motorTorque * motorInput;
-		//rearRightWheel.motorTorque = motorTorque * motorInput;
+		rearLeftWheel.motorTorque = motorTorque * motorInput;
+		rearRightWheel.motorTorque = motorTorque * motorInput;
 
 
         //Applying our visual wheels, for te front and back

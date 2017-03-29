@@ -1,0 +1,67 @@
+//I have used an example on the arduino website to get me started, which I have learnt, understood and adapted to my needs.
+//http://playground.arduino.cc/Main/MPU-6050
+
+
+//Using the Wire library
+#include<Wire.h>
+
+//I2C slave address = which is our Gyro
+const int MPUaddress=0x68;
+
+//Declaring the pin numbers for our buttons
+const int buttonOnePin = 11;
+const int buttonTwoPin = 12;
+
+//Button states 
+int buttonOneState = 0;
+int buttonTwoState = 0;
+
+//Creating a single intager of 16bits.
+int16_t X,Y,Z;
+ 
+void setup() 
+{
+  //Start the communication with our slave using the given adress
+  Wire.beginTransmission(MPUaddress);
+  Wire.write(0x6B);  
+  //Wake up our Gyro 
+  Wire.write(0);
+  Wire.endTransmission(true);
+
+  //Set our button pins to Input
+  pinMode(buttonOnePin, INPUT);
+  pinMode(buttonTwoPin, INPUT);
+
+  //Serial Port
+  Serial.begin (9600);
+}
+ 
+void loop()
+{
+
+//Read and Set the button values
+buttonOneState = digitalRead(buttonOnePin);
+buttonTwoState = digitalRead(buttonTwoPin);
+
+//Communicate with the gyro and Get our data
+Wire.beginTransmission(MPUaddress);
+Wire.write(0x3B);  // ACCEL_XOUT_H = High 
+Wire.endTransmission(false);
+Wire.requestFrom(MPUaddress,14,true);
+//Read the first byte for X,Y,Z
+X=Wire.read()<<8|Wire.read();
+Y=Wire.read()<<8|Wire.read();
+Z=Wire.read()<<8|Wire.read();
+
+//Print our results so that we can process the data in Unity
+Serial.print("D"); Serial.println(buttonOneState);
+delayMicroseconds(10); 
+Serial.print("E"); Serial.println(buttonTwoState);
+delayMicroseconds(10); 
+Serial.print("A"); Serial.println(X);
+delayMicroseconds(10); 
+Serial.print("B"); Serial.println(Y);
+delayMicroseconds(10); 
+Serial.print("C"); Serial.println(Z);
+delay(100);
+}

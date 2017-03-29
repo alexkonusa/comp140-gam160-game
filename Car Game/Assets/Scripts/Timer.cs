@@ -11,14 +11,23 @@ public class Timer : MonoBehaviour
 
 	public bool timerON = false;
 
-	// Update is called once per frame
-	void Update () 
+    PortListener portListener;
+
+    private void Start()
+    {
+
+        portListener = GameObject.Find("GameManager").GetComponent<PortListener>();
+
+    }
+
+    // Update is called once per frame
+    void Update () 
 	{
 
 		timerDisplay.text = "Time Left: " + timeLeft;
 
         //if any key is pressed our timer will start
-		if (Input.anyKey)
+		if (Input.anyKey | portListener.buttonOne == 1 | portListener.buttonTwo == 1)
 		{
 
 			timerON = true;
